@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: 2021-2022 Romain Vigier <contact AT romainvigier.fr>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<schemalist gettext-domain="tuned-profile-switcher@cr7pt0gr4ph7.github.io">
+	<schema id="io.github.cr7pt0gr4ph7.tuned-profile-switcher" path="/org/gnome/shell/extensions/tuned-profile-switcher/">
+		<key name="settings-version" type="i">
+			<default>0</default>
+		</key>
+		<key name="feature-enabled" type="b">
+			<default>false</default>
+		</key>
+	</schema>
+</schemalist>

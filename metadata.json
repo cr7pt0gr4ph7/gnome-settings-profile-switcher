@@ -2,6 +2,8 @@
   "name": "TuneD Profile Switcher",
   "description": "Provides a quick way to switch active TuneD profiles",
   "uuid": "tuned-profile-switcher@cr7pt0gr4ph7.github.io",
+  "gettext-domain": "tuned-profile-switcher@cr7pt0gr4ph7.github.io",
+  "settings-schema": "io.github.cr7pt0gr4ph7.tuned-profile-switcher",
   "shell-version": [
     "44"
   ]
