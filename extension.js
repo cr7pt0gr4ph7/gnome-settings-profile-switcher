@@ -58,6 +58,28 @@ const ExampleToggle = GObject.registerClass(
         }
     });
 
+// This is a bit of a hack, but it works for now. Originally taken from
+// the gjs guide on how to position items above the background apps menu.
+// This version was taken from:
+// https://github.com/qwreey/quick-settings-tweaks/blob/gnome44-legacy/libs/utility.js
+function addQuickSettingsItems(items) {
+    const QuickSettings = Main.panel.statusArea.quickSettings;
+    const QuickSettingsGrid = QuickSettings.menu._grid;
+
+    // Add the items with the built-in function
+    QuickSettings._addItems(items)
+
+    // Ensure the tile(s) are above the background apps menu
+    if (QuickSettings._backgroundApps) {
+        for (const item of items) {
+            QuickSettingsGrid.set_child_below_sibling(
+                item,
+                QuickSettings._backgroundApps.quickSettingsItems[0]
+            )
+        }
+    }
+}
+
 class TunedProfileSwitcher {
     constructor() {
     }
@@ -68,7 +90,7 @@ class TunedProfileSwitcher {
 
         // GNOME 45
         // Main.panel.statusArea.quickSettings.menu._indicators.add_child(this);
-        Main.panel.statusArea.quickSettings._addItems(this._indicator.quickSettingsItems);
+        addQuickSettingsItems(this._indicator.quickSettingsItems);
 
         // GNOME 45+
         // Main.panel.statusArea.quickSettings.addExternalIndicator(this._indicator);
