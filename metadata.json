@@ -1,0 +1,8 @@
+{
+  "name": "TuneD Profile Switcher",
+  "description": "Provides a quick way to switch active TuneD profiles",
+  "uuid": "tuned-profile-switcher@cr7pt0gr4ph7.github.io",
+  "shell-version": [
+    "44"
+  ]
+}
