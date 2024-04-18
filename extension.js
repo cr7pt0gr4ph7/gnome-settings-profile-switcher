@@ -9,7 +9,7 @@ import * as QuickSettings from 'resource:///org/gnome/shell/ui/quickSettings.js'
 */
 
 // GNOME <= 44 uses a custom import system
-const {Gio, GObject} = imports.gi;
+const { Gio, GObject } = imports.gi;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
